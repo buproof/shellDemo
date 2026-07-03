@@ -34,6 +34,18 @@ Then configure the app to point to it via environment variables:
 - `VITE_OPENCODE_SERVER_HOST` — backend host (default: `127.0.0.1`)
 - `VITE_OPENCODE_SERVER_PORT` — backend port (default: `4096`)
 
+### Channel / Dev Badge
+
+Running `bun dev` without setting `OPENCODE_CHANNEL` defaults to the `dev` channel, which shows a **"DEV"** badge in the top-left titlebar and enables dev-only UI features (debug bar, new layout designs, etc.) that differ from the production site.
+
+To match the production experience, set the channel explicitly:
+
+```bash
+OPENCODE_CHANNEL=prod bun dev
+```
+
+Available channels: `dev` (default), `beta`, `prod` / `latest`.
+
 ## Build
 
 ```bash
